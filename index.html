@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FOODORA - makanan lezat dan minuman segar.">
+  <title>FOODORA | Food & Beverage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home">FOOD<span>ORA.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Beranda</a><a href="#menu">Menu</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn" id="openCart" aria-label="Buka keranjang">Keranjang <span class="cart-count" id="cartCount">0</span></button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Fresh food, happy mood</span>
+          <h1>Rasa enak,<br><em>hari lebih</em><br>berwarna.</h1>
+          <p class="hero-copy">Temukan makanan favorit dan minuman segar yang dibuat dengan bahan pilihan. Saatnya manjakan lidah tanpa perlu menunggu momen spesial.</p>
+          <div class="hero-buttons"><a class="btn btn-primary" href="#menu">Jelajahi menu ↗</a><a class="btn btn-light" href="#tentang">Kenali kami</a></div>
+          <p class="hero-note">✦ Dibuat segar • Bahan pilihan • Harga bersahabat</p>
+        </div>
+        <div class="hero-art">
+          <div class="hero-blob"></div>
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1000&q=85" alt="Mangkuk makanan segar">
+          <div class="floating-tag tag-one">🥗 Fresh setiap hari</div>
+          <div class="floating-tag tag-two">⭐ Favorit pelanggan</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="kicker">Pilihan spesial</p><h2>Menu favorit kami</h2></div>
+          <p class="section-desc">Dari makanan gurih sampai minuman menyegarkan, ada pilihan untuk menemani harimu.</p>
+        </div>
+        <div class="categories" id="filters">
+          <button class="filter active" data-category="Semua">Semua</button>
+          <button class="filter" data-category="Makanan">Makanan</button>
+          <button class="filter" data-category="Minuman">Minuman</button>
+          <input class="search" id="searchInput" type="search" placeholder="Cari menu..." aria-label="Cari menu">
+        </div>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="promo">
+          <div><p class="kicker" style="color:var(--lime)">Penawaran hari ini</p><h2>Waktunya makan enak tanpa bikin dompet panik.</h2><p>Pilih menu favoritmu dan nikmati pengalaman makan yang menyenangkan.</p></div>
+          <a href="#menu" class="btn">Lihat menu →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tentang">
+      <div class="container about-grid">
+        <div class="about-card"><span class="eyebrow">Cerita FOODORA</span><strong>Good food.<br>Good day.</strong><span>Rasa sederhana, pengalaman istimewa.</span></div>
+        <div class="about-copy"><p class="kicker">Lebih dari sekadar makanan</p><h2>Dibuat dengan rasa, disajikan dengan cerita.</h2><p>FOODORA adalah konsep brand Food & Beverage yang mengutamakan rasa, kualitas bahan, dan pelayanan yang ramah. Kami percaya makanan enak bisa membuat hari biasa terasa lebih menyenangkan.</p>
+          <div class="features"><div class="feature">🌿<b>Bahan pilihan</b><small>Dipilih dengan teliti.</small></div><div class="feature">🍳<b>Disajikan segar</b><small>Dibuat untuk dinikmati.</small></div><div class="feature">♡<b>Ramah pelanggan</b><small>Kenyamanan jadi prioritas.</small></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak">
+    <div class="container footer-inner">
+      <div><a class="logo" href="#home">FOODORA.</a><p>Good food, better moments. © <span id="year"></span> FOODORA.</p></div>
+      <div class="footer-links"><a href="#home">Beranda</a><a href="#menu">Menu</a><a href="#tentang">Tentang kami</a><a href="mailto:hello@foodora.example">Email</a></div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Keranjang belanja">
+    <div class="cart-head"><h2 style="font-size:1.5rem">Keranjang</h2><button class="close-btn" id="closeCart" aria-label="Tutup keranjang">×</button></div>
+    <div class="cart-items" id="cartItems"><p style="color:var(--muted);padding:25px 0">Keranjangmu masih kosong.</p></div>
+    <div class="cart-total"><div class="total-line"><span>Total</span><span id="cartTotal">Rp0</span></div><button class="btn btn-primary checkout" id="checkoutBtn">Checkout</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
